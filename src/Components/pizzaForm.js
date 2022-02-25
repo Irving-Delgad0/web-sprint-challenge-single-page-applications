@@ -91,7 +91,7 @@ const Form = (props) => {
                     </label>
                 </div>
                 <div>
-                    <input 
+                    <input id="order-button"
                         type="submit"
                         value="Place Order"
                     />

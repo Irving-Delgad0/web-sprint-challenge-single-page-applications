@@ -15,6 +15,7 @@ const initialFormValues = {
   sausage: false,
   ham: false,
   pineapple: false,
+  special: ""
 }
 
 const initialFormErrors = {
@@ -36,6 +37,7 @@ const App = () => {
   const formSubmit = () => {
     axios.post("https://reqres.in/api/orders", formValues)
     .then(res => {
+      console.log(res)
       setOrders([res.data, ...orders])
       setFormValues(initialFormValues)
     }).catch(err => console.error(err))
